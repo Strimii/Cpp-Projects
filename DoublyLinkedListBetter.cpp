@@ -16,10 +16,10 @@ struct Node {
 };
 
 class List {
- private:
+  private:
   Node* sentinel;
 
- public:
+  public:
   List() {
     sentinel = new Node("");
     sentinel->next = sentinel;
@@ -76,7 +76,7 @@ class List {
     if (testt == "n") {
         cout << ("Error remove") << endl;
 
-  }
+  }}
 
   void clean() {
     Node* current = sentinel->next;
@@ -111,40 +111,41 @@ class List {
       add(current->data);
     }
     other.clean();
-}
+  }
 };
 
+
 int main() {
-List list;
-list.add("ala");
-list.add("ma");
-list.add("kota");
-list.add("a");
-list.add("kot");
-list.add("ma");
-list.add("ale");
+  List list;
+  list.add("ala");
+  list.add("ma");
+  list.add("kota");
+  list.add("a");
+  list.add("kot");
+  list.add("ma");
+  list.add("ale");
 
-list.print();
+  list.print();
 
-list.search("kota");
-list.search("pies");
+  list.search("kota");
+  list.search("pies");
 
-list.remove("ma");
-list.print();
+  list.remove("ma");
+  list.print();
 
-list.non_repeated();
-list.print();
+  list.non_repeated();
+  list.print();
 
-List list2;
-list2.add("jest");
-list2.add("piękny");
-list2.add("dzień");
+  List list2;
+  list2.add("jest");
+  list2.add("piękny");
+  list2.add("dzień");
 
-list.merge(list2);
-list.print();
+  list.merge(list2);
+  list.print();
 
-list.clean();
-list.print();
+  list.clean();
+  list.print();
 
-return 0;
+  return 0;
 }
